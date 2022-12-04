@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+    <h4> Дата: {{ el.data }} </h4>
+    <h4> Завод: {{ el.factory_name }} </h4>
+    <h4> Объект: {{ el.object_name }} </h4>
+    <h4> Блок: {{ el.block }} </h4>
+    <h4> Марка бетона: {{ el.mark }} </h4>
+    <h4> Конструктив: {{ el.constructive }} </h4>
+    <h4> Этаж: {{ el.floor }} </h4>
+    <h4> Факт: {{ el.fact_concrete }} </h4>
+    <h4> Итого залито: {{ el.sum_concrete }} </h4>
+    <h4> Заполнил: {{ el.accepted }} </h4>
+    <a href="{% url 'update' user.id %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Редактировать</button></li></a>
+    <a href="{% url 'delete' user.id %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Удалить</button></li></a>
+</body>
+</html>

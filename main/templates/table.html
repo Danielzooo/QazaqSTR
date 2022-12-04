@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table of concrete</title>
+</head>
+<body>
+<h1>Все Записи</h1>
+<h1>----------------------------------</h1>
+<table>
+    <tbody>
+        <tr>
+          <th>Дата</th>
+          <th>Завод</th>
+          <th>Объект</th>
+          <th>Блок</th>
+          <th>Марка бетона</th>
+          <th>Конструктив</th>
+          <th>Этаж</th>
+          <th>Факт</th>
+          <th>Итого залито</th>
+          <th>Заполнил</th>
+        </tr>
+        {% for el in model_concrete %}
+            <tr>
+              <td>{{ el.data }}</td>
+              <td>{{ el.factory_name }}</td>
+              <td>{{ el.object_name }}</td>
+              <td>{{ el.block }}</td>
+              <td>{{ el.mark }}</td>
+              <td>{{ el.constructive }}</td>
+              <td>{{ el.floor }}</td>
+              <td>{{ el.fact_concrete }}акт</td>
+              <td>{{ el.sum_concrete }}</td>
+              <td>{{ el.accepted }}</td>
+            </tr>
+    </tbody>
+</table>
+<a href="{% url 'detail' el.id %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Читать детальнее</button></li></a>
+<h1>----------------------------------</h1>
+
+{% endfor %}
+
+</body>
+</html>
