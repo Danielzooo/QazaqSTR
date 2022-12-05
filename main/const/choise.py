@@ -39,3 +39,10 @@ class ConstructiveChoise(models.TextChoices):
     K = 'k', 'K'
     T = 't', 'T'
     MS = 'ms', 'MS'
+
+
+class CustomUserRoleChoice(models.TextChoices):
+    SUPER_ADMIN = 'super_admin', 'СуперАдмин'
+    ADMIN = 'admin', 'Админ'
+    MANAGER = 'manager', 'Менеджер'
+    DEFAULT = 'default', 'Обычный'

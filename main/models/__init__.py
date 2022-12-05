@@ -1,1 +1,1 @@
-from .main_model import SaveConcreate
+from main.models.main_model import Registration, SaveConcreate
